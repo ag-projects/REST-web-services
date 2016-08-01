@@ -1,0 +1,31 @@
+package com.boot;
+
+import static org.hamcrest.MatcherAssert.*;
+
+import java.io.IOException;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.boot.test.WebIntegrationTest;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.web.client.RestTemplate;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringApplicationConfiguration(App.class)
+@WebIntegrationTest
+public class ShipwreckControllerWebIntegratioTest 
+{
+	
+	@Test
+	public void testListAll() throws IOException 
+	{
+		RestTemplate restTemplate = new RestTemplate();
+		ResponseEntity<String> response = restTemplate.getForEntity(url, responseType);
+		
+		assertThat(response.getStatusCode(), equals(HttpStatus.OK));
+		
+	}
+}

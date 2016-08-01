@@ -1,0 +1,14 @@
+package com.boot;
+
+import org.junit.Test;
+
+import com.boot.controller.ShipwreckController;
+
+public class ShipwreckControllerTest
+{
+	@Test
+	public void testShipwreck()
+	{
+		ShipwreckController controller = new ShipwreckController();
+	}
+}

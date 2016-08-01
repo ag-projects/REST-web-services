@@ -1,0 +1,14 @@
+package com.boot;
+
+import org.junit.Test;
+
+import com.boot.controller.HomeController;
+
+public class AppTest {
+	
+	@Test
+    public void testApp()
+    {
+		HomeController controller = new HomeController();
+    }
+}
